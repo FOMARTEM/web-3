@@ -1,7 +1,24 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
+
+var k, p, v float64 = 1296, 6, 6
 
 func main() {
-	fmt.Println("Hello, world!!!")
+	fmt.Println(T())
+}
+
+func M() float64 {
+	return p * v
+}
+
+func W() float64 {
+	return math.Sqrt(k / M())
+}
+
+func T() float64 {
+	return 6 / W()
 }
